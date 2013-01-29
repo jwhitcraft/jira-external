@@ -23,5 +23,6 @@
     "scripts": [
       "js/src/background.js"
     ]
-  }
+  },
+  "update_url" : "http://chrome.h2ik.co/jira-external/updates.xml"
 }
