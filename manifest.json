@@ -1,20 +1,27 @@
 {
-  "manifest_version": 1,
+  "manifest_version": 2,
 
   "name": "Jira External Links",
-  "description": "This Forecase all external links to open in new windows/tabs",
-  "version": "1",
+  "description": "This will force all external links to open in new windows/tabs",
+  "version": "1.0.2",
 
   "permissions": [
-    "https://sugarcrm.atlassian.net/",
+    "webRequest",
+    "https://sugarcrm.atlassian.net/*"
   ],
 
   "content_scripts": [
     {
       "matches": ["*://sugarcrm.atlassian.net/*"],
       "js": [
-        "js/src/jira.js",
+        "js/lib/jquery.min.js",
+        "js/src/jira.js"
       ]
     }
   ],
+  "background": {
+    "scripts": [
+      "js/src/background.js"
+    ]
+  }
 }
